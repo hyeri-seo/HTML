@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+        span {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+        }
+        /* #box {
+            float: left;
+        } */
+    </style>
+</head>
+<body>
+    <!-- span은 인라인 객체라서 라인을 바꾸지 않음
+    블록 객체는 h1 같은 h, 테이블 태그, div 태그 등으로 라인을 자동으로 바꿔줌
+    div는 위 아래로 줄바꿈을 해줌 그래서 div가 중간에 있는 거랑 아닌 거랑 다르게 보임
+    div의 가로 세로를 지정하는 거는 style임 속성이 아님 그래서 width, height 못 씀
+    width, height 속성을 쓸 수 있는 거는 몇 안 됨 img 같은 것만 가능함 -->
+    <span>더미 객체</span>
+    <div id="box">대상 객체</div>
+    <span>더미 객체</span>
+</body>
+</html>
