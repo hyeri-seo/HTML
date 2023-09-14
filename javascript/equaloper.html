@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let n = 10; //number type
+        let s = '10'; //string type
+
+        if(n==s) { // 타입이 달라도 알아서 형변환을 해줘서 같은 것으로 취급합
+            console.log('같다');
+        } else {
+            console.log('다르다');
+        }
+
+        if(n===s) { //equal 세 개는 데이터뿐만 아니라 데이터 타입(자료형)도 같아야 함
+            console.log('같다');
+        } else {
+            console.log('다르다');
+        }
+
+        let b = true;
+        let bs = 'true';
+
+        if(b==Boolean(bs)) { //얘는 형변환이 안 돼서 수동 형변환 해줘야 함
+            console.log('같다');
+        } else {
+            console.log('다르다');
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

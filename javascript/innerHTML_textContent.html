@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            let div1 = document.getElementById("div1");
+            div1.innerHTML = 'Bye!!';
+            //div1.innerHTML = '<h>Bye!!</h>';
+            //innerHTML은 태그는 태그로 인식함
+            //그러니까 태그 있는 애들은 꼭 innerHTML을 사용해야 함
+            
+            let div2 = document.getElementById("div2");
+            div2.textContent = 'Bye!!';
+            //div2.textContent = '<h>Bye!!</h>';
+            //textContent는 태그를 인식을 못 함
+        }
+    </script>
+</head>
+<body>
+    <div id="div1"></div>
+    <div id="div2"></div>
+</body>
+</html>

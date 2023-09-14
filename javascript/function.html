@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //1.
+        function add(x,y) {
+            return x+y;
+        }
+        var s = add(10,20); //s는 number type
+        //alert(s);
+
+        var sum = add; //함수 호출하지 않았음. 함수명만 변수에 담았음. function type
+        var s2= sum(100, 200); //함수명을 변수에 담으면 함수처럼 사용할 수 있음. function형
+
+        //2. 명시적 방법
+        var minus = function(x,y) { //익명함수를 정의해서 변수에 담아서 쓰는 것임
+            return x-y;
+        }
+        alert(minus(100,50));
+
+        // var multi = function(x,y) {
+        //     return x*y;
+        // }
+
+        // var multi = (x,y) => {return x*y};
+        
+        //3. 화살표 함수 방법
+        var multi = (x,y) => x*y; //자바는 람다식. 자바스크립트에서는 화살표 함수라고 함
+        alert(multi(10,20));
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

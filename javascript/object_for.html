@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var product = {
+            name:'건조망고', //제 품 명이라고 쓸 때는 "" 필요함
+            type: '당절임',
+            ingredient: '망고, 설탕, 메타중아환산나트륨, 치자황색소',
+            origin: '필리핀'
+        };
+
+        var n1 = product.name;
+        var n2 = product["name"];
+        console.log(n1);
+
+        //for-in문은 자바의 향상된 for문과 비슷함
+        for(var i in product) { //for-in문에서 in 뒤에 객체가 올 때의 i는 key
+            console.log(i+':'+product[i]);
+        }
+
+        var arr = [10,20,30,40,50];
+        for(var i in arr) { //for-in문에서 in 뒤에 배열이 올 때의 i는 인덱스(순서)
+            console.log(arr[i]);
+        }        
+
+        for(var i of arr) { //for-in문에서는 arr[i]로, for-of문에서는 i로
+            console.log(i);
+        }
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
