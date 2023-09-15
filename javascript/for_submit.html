@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function() { //윈도우 창이 다 불러지고 나서 실행되는 함수
+            form.onsubmit = function(e) { //submit이 실행되기 직전에 함수 안에 있는 것 실행함
+                let id = document.getElementById("id");
+                if(id.value.trim().length<4) {
+                    alert('아이디 오류')
+                    // e.preventDefault();
+                }
+                let password = document.getElementById("password");
+                if(password.value.trim().length<4) {
+                    alert('비밀번호 오류')
+                    // e.preventDefault();
+                //다음으로 못 넘어가게. return false와 비슷함
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <form action="test.html" id="form">
+        <input type="text" name="id" id="id" placeholder="아이디"><br>
+        <input type="password" name="password" id="password" placeholder="비밀번호"><br>
+        <input type="checkbox" name="hobby" value="book">독서
+        <input type="checkbox" name="hobby" value="movie">영화감상
+        <input type="checkbox" name="hobby" value="music">음악감상<br>
+        <input type="radio" name="gender" value="male" checked>남
+        <input type="radio" name="gender" value="female">여
+        <!-- name은 form을 submit할 때 input에 내용이 넘어갈 변수명. 파라미터 -->
+        <input type="submit">
+    </form>
+</body>
+</html>

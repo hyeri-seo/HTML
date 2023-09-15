@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div {
+            width: 100px; height: 100px;
+            background-color: red;
+        }
+    </style>
+    <script>
+        window.onload = function () { //event: 이미 정의되어 있는 함수
+            //on~ 으로 되어 있는 애들은 파라미터를 갖다 쓰면 윈도우에 대한 정보를 파라미터로 줌
+            btn.onclick = function(event) {
+                // console.log(event.button);
+                console.log("Mouse Click");
+            }
+            btn.oncontextmenu = function(event) {
+                console.log(event.button);
+            }
+            btn.onmousedown = function(event) {
+                console.log("Mouse Down"); //모든 클릭에 다 발생함+클릭보다 먼저
+            }
+            btn.onmouseup = function(event) {
+                console.log("Mouse Up"); //모든 클릭에 다 발생함+클릭보다 먼저
+            }
+            div.onclick = function(event) {
+                if(event.altKey) {
+                    console.log("Enter Alt key");
+                } else if(event.shiftKey) {
+                    console.log("Enter Shift Key");
+                }
+                else if(event.ctrlKey) {
+                    console.log("Enter Ctrl Key");
+                }
+            }
+            div.ondblclick = function(event) {
+                console.log("double click"); //마우스 왼쪽 버튼에만 작용함
+            }
+        }
+    </script>
+</head>
+<body>
+    <button id="btn">click</button>
+    <div id="div"></div>
+</body>
+</html>

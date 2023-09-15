@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .selected {
+            background-color: #0f0;
+        }
+        li {
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function toggleSelect(li) {
+            li.classList.toggle('selected'); //classList에 원래 토글 기능 있음
+          }
+        function singleSelect(li) {
+            let selected = ul.querySelectorAll('.selected');
+            // ctrl키를 제외한 걸로 누르면 기존에 누른 걸 다 해제해주는 거
+            for(var elem of selected) {
+                elem.classList.remove('selected');
+            }
+            li.classList.add('selected');
+        }
+        window.onload = function() {
+            ul.onclick = function(e) {
+                if(e.target.tagName != 'LI') return;
+                if(e.ctrlKey) {
+                    toggleSelect(e.target);
+                } else {
+                    singleSelect(e.target);
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    선택하고자 하는 요소를 클릭하세요<br>
+    <ul id="ul">
+        <li class="selected">React</li>
+        <li>Angular</li>
+        <li>Vue</li>
+        <li>Svelte</li>
+        <li>Blazor</li>
+    </ul>
+</body>
+</html>
