@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <style>
+        #wrapper {
+            width: 1000px;
+        }
+        #header {
+            width: 1000px;
+            text-align: center;
+            font-size: x-large;
+        }
+        table {
+            margin: 0 auto;
+        }
+        #head {
+            padding-right: 95px;
+            background-color: orange;
+        }
+        #content {
+            background-color: lightskyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <b>게시판글상세</b><br>
+        </div>
+        <br>
+        <table>
+            <tbody>
+                <tr>
+                    <td id="head">글쓴이</td>
+                    <td id="content"><input type="text"></td>
+                </tr>
+                <tr>
+                    <td id="head">제 목</td>
+                    <td id="content"><input type="text"></td>
+                </tr>
+                <tr>
+                    <td id="head">내 용</td>
+                    <td><textarea name="" id="" cols="50" rows="20"></textarea></td>
+                </tr>
+                <tr>
+                    <td id="head">이미지</td>
+                    <td><img src="기요밍.jpg" width="100px" height="100px"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        &nbsp;&nbsp;&nbsp;<button onclick="location.href = 'boardlist.html'"></a>수정</button>
+                        &nbsp;&nbsp;&nbsp;<a href="">목록</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

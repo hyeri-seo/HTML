@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="jquery.lightbox-0.5.js"></script>
+    <style>
+        #wrapper {
+            width: 1000px;
+        }
+        #header {
+            width: 1000px;
+            text-align: center;
+        }
+        table {
+            margin: 0 auto;
+        }
+        th {
+            background-color: orange;
+            font-weight: bold;
+            text-align: center;
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+        a:link {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <b>글 목록&nbsp&nbsp <a href="boardlist.html"><u>글쓰기</u></a></b>
+            <form>
+                <br><select name="" id="">
+                    <option>제목</option>
+                    <option>작성자</option>
+                    <option>내용</option>
+                </select>
+                <input type="text">
+                <button>검색</button>
+            </form>
+        </div>
+        <br>
+        <table>
+            <th>번호</th>
+            <th>제목</th>
+            <th>작성자</th>
+            <th>날짜</th>
+            <th>조회수</th>
+            <th>삭제</th>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <style>
+        #wrapper {
+            width: 1000px;
+        }
+        #header {
+            width: 1000px;
+            text-align: center;
+            font-size: x-large;
+        }
+        table {
+            margin: 0 auto;
+        }
+        #head {
+            padding-right: 20px;
+            background-color: orange;
+        }
+        #content {
+            background-color: lightskyblue;
+        }
+    </style>
+    <script>
+        function onclick(e) {
+            if($('#content').length==0) {
+                alert('내용을 입력하세요.');
+                e.preventDefault();
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <b>게시판글등록</b>
+        </div>
+        <br>
+        <form action="listbox.html" onsubmit="return false;">
+            <table>
+                <tbody>
+                    <tr>
+                        <td id="head">글쓴이</td>
+                        <td id="content"><input type="text" name="writer" id="writer"></td>
+                    </tr>
+                    <tr>
+                        <td id="head">제 목</td>
+                        <td id="content"><input type="text" name="title" id="title"></td>
+                    </tr>
+                    <tr>
+                        <td id="head">내 용</td>
+                        <td><textarea name="contents" id="contents" cols="50" rows="20"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td id="head">이미지 파일 첨부</td>
+                        <td id="content"><button>파일 선택</button> 선택된 파일 없음</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            &nbsp;&nbsp;&nbsp;<button type="submit" onclick="onclick(event)"></a>등록</button>
+                            &nbsp;&nbsp;&nbsp;<button>다시쓰기</button>
+                        </td>
+                    </tr>
+                </tbody> 
+            </table>
+        </form>
+    </div>
+</body>
+</html>
